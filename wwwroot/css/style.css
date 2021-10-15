@@ -1,0 +1,27 @@
+.tabela-categorias tr > th:last-child,
+.tabela-categorias tr > td:last-child
+{
+    width: 1%;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.tabela-produtos tr > th:last-child,
+.tabela-produtos tr > td:last-child,
+.tabela-produtos tr > th:nth-child(4),
+.tabela-produtos tr > td:nth-child(4)
+{
+    width: 1%;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.tabela-clientes tr > th:last-child,
+.tabela-clientes tr > td:last-child,
+.tabela-clientes tr > th:nth-child(6),
+.tabela-clientes tr > td:nth-child(6)
+{
+    width: 1%;
+    white-space: nowrap;
+    text-align: center;
+}

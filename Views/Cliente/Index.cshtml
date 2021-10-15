@@ -1,0 +1,55 @@
+@using System.Globalization
+@model IEnumerable<ClienteModel>
+@{
+    ViewBag.Subtitulo = "Lista de Clientes";
+}   
+ 
+<br>
+<header class="d-flex justify-content-between align-items-center">
+    <div>
+        <h1 class="text-primary">@ViewBag.Subtitulo</h1>
+    </div>
+    <div>
+        <a asp-action="Cadastrar" class="btn btn-primary">Novo Cliente</a>
+    </div>
+</header>
+<hr>
+
+<partial name="_Mensagem"></partial>
+
+@if (Model.Count() > 0)
+{
+    <table class="table table-striped tabela-clientes">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Sobrenome</th>
+                <th>CPF</th>
+                <th>Credito</th>
+                <th>Telefone</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var cliente in Model)
+            {
+                <tr>
+                    <td>@cliente.Nome</td>
+                    <td>@cliente.Sobrenome</td>
+                    <td>@cliente.Cpf</td>
+                    <td>@cliente.Credito</td>
+                    <td>@cliente.Telefone</td>
+                    <td>
+                        <a asp-action="Index" asp-controller="Endereco" asp-route-cid="@cliente.IdCliente" class="btn btn-sm btn-secondary">Endereço</a>
+                        <a asp-action="Cadastrar" asp-route-id="@cliente.IdCliente" class="btn btn-sm btn-secondary">Alterar</a>
+                        <a asp-action="Excluir" asp-route-id="@cliente.IdCliente" class="btn btn-sm btn-danger">Excluir</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>Não há nenhum cliente cadastrado.</p>
+}    
