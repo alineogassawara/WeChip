@@ -17,7 +17,7 @@ Projeto consiste criação de sistema de controle para loja com informações de
 
 ## 💡 **Tecnologias** 
 
-O trabalho foi desenvolvido com as seguintes tecnologias: Asp .Net Corem Entity Framework e Bootstrap.
+O trabalho foi desenvolvido com as seguintes tecnologias: Asp .Net Core Entity Framework e Bootstrap.
 
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=alineogassawara&langs_count=10)](https://github.com/alineogassawara/WeChip/edit/main/README.mds)
 
